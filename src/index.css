@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Print Styles for Executive PDF Report */
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+    font-size: 12pt !important;
+  }
+  
+  /* Hide sidebar, control headers, and helper buttons during print */
+  .no-print,
+  button,
+  nav,
+  aside,
+  .theme-selector,
+  .ai-copilot-panel,
+  .editor-controls,
+  .filter-panel,
+  .toast,
+  .upload-area,
+  .preset-section {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-page-break {
+    page-break-before: always;
+  }
+
+  /* Expand full dashboard to print */
+  main, .dashboard-container {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Two column layout for widgets inside print */
+  .dashboard-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .widget-full {
+    grid-column: span 2 !important;
+  }
+
+  .widget-half {
+    grid-column: span 1 !important;
+  }
+}
