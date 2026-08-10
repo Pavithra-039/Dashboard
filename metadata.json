@@ -1,0 +1,6 @@
+{
+  "name": "Automated SaaS Dashboard Creator",
+  "description": "Upload CSV files, auto-generate interactive SaaS dashboards, customize layouts, chat with an AI data co-pilot, and share public reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
